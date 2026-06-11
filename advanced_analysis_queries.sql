@@ -472,3 +472,5 @@ SELECT *
 FROM latest_orders
 WHERE rn = 1
 AND amount > 500;
+
+- `advanced_analysis_queries.sql` — contains advanced SQL queries using CASE WHEN, subqueries, CTEs, and window functions.
