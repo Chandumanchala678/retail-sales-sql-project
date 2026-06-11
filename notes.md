@@ -63,7 +63,7 @@ SELECT *
 FROM customers;
 ```
 
-## WHERE
+### WHERE
 
 Used to filter rows based on a condition.
 
@@ -229,3 +229,33 @@ FROM customers c
 LEFT JOIN orders o
 ON c.customer_id = o.customer_id;
 ```
+
+## Day 12 Notes: SQL Project Upgrade
+
+Today I upgraded my Retail Sales SQL project with advanced SQL queries.
+
+### Advanced Topics Added
+
+- CASE WHEN
+- DISTINCT
+- Date filtering
+- Subqueries
+- CTEs
+- ROW_NUMBER
+- RANK
+- DENSE_RANK
+- LAG
+- LEAD
+- Running totals
+
+### What I Learned
+
+I learned how to organize advanced SQL queries inside a project file.
+
+I also learned how to explain SQL logic in a project README so that recruiters and interviewers can understand what the project covers.
+
+### Project Improvement
+
+I created a new file called `advanced_analysis_queries.sql`.
+
+This file includes advanced business analysis queries for customer sales, product sales, order status analysis, sales categorization, ranking, latest order analysis, and running total calculations.

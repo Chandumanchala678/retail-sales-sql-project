@@ -6,16 +6,13 @@ This project analyzes retail sales data using SQL. The dataset contains customer
 
 This is my first SQL project as part of my 90-day Data Engineering learning journey.
 
-
 ## Project Goal
 
 The goal of this project is to practice core SQL skills used in data engineering and analytics, including filtering, sorting, aggregations, grouping, joins, and data quality checks.
 
-
 ## Tables Used
 
 This project uses three tables:
-
 
 ### 1. customers
 
@@ -30,7 +27,6 @@ Columns:
 - customer_status
 - email
 
-
 ### 2. products
 
 The `products` table stores product details.
@@ -41,7 +37,6 @@ Columns:
 - product_name
 - category
 - price
-
 
 ### 3. orders
 
@@ -56,7 +51,6 @@ Columns:
 - amount
 - order_status
 - order_date
-
 
 ## Skills Practiced
 
@@ -82,7 +76,6 @@ In this project, I practiced the following SQL concepts:
 - Multi-table joins
 - Data quality checks
 
-
 ## Business Questions Answered
 
 This project answers business questions such as:
@@ -103,11 +96,9 @@ This project answers business questions such as:
 14. Which customers placed more than one order?
 15. What are completed sales by city?
 
-
 ## Data Quality Checks
 
 This project includes basic data quality checks.
-
 
 ### 1. Orders with Missing Customer Records
 
@@ -115,13 +106,11 @@ Order `106` has `customer_id = 99`, but customer ID `99` does not exist in the `
 
 This was found using a `LEFT JOIN` between `orders` and `customers`.
 
-
 ### 2. Customers Without Orders
 
 Customer `Mike` did not place any order.
 
 This was found using a `LEFT JOIN` between `customers` and `orders`.
-
 
 ### 3. Products Never Ordered
 
@@ -129,13 +118,11 @@ Product `Tablet` was never ordered.
 
 This was found using a `LEFT JOIN` between `products` and `orders`.
 
-
 ## Files in This Repository
 
 - `create_tables.sql` — creates the customers, products, and orders tables and inserts sample data.
 - `analysis_queries.sql` — contains SQL queries used to analyze the retail sales data.
 - `notes.md` — contains project notes, key learnings, and explanations.
-
 
 ## Key Learnings
 
@@ -152,22 +139,20 @@ Through this project, I learned how to:
 - Identify missing records using LEFT JOIN and IS NULL.
 - Write SQL queries to answer business questions.
 
+## Advanced SQL Concepts Covered
 
-## Tools Used
+This project also includes advanced SQL practice using:
 
-- SQL
-- SQLite Online / DB Fiddle
-- GitHub
+- `CASE WHEN` for business categorization
+- `DISTINCT` for unique value analysis
+- Date filtering using `BETWEEN`
+- Subqueries for average, minimum, and maximum comparisons
+- `IN` and `NOT IN` subqueries for record matching
+- CTEs using `WITH` for readable multi-step SQL logic
+- Window functions such as `ROW_NUMBER`, `RANK`, and `DENSE_RANK`
+- `LAG` and `LEAD` for previous and next row comparison
+- Running totals using window functions
 
+## Advanced Analysis File
 
-## Project Status
-
-Completed as part of Week 1 SQL practice in my 90-day Data Engineering training plan.
-
-
-## How to Run This Project
-
-1. Open SQLite Online, DB Fiddle, or any SQL editor.
-2. Run `create_tables.sql` first to create the tables and insert sample data.
-3. Run `analysis_queries.sql` to execute the analysis queries.
-4. Review the results for sales metrics, customer activity, product analysis, and data quality checks.
+The file `advanced_analysis_queries.sql` contains advanced business analysis queries, including customer sales analysis, product sales analysis, missing record checks, sales categorization, latest order analysis, ranking, and running total calculations.
